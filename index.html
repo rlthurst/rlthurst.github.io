@@ -7,18 +7,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="./style/style.css" />
 </head>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("sidebar-btn").addEventListener("click", () => {
+      document.getElementById("sidebar").classList.toggle("sidebar-open")
+    })
+    document.getElementById("main").addEventListener("click", () => {
+      document.getElementById("sidebar").classList.remove("sidebar-open")
+    })
+
+  })
+</script>
 
 <body id="top">
   <header>
+    <div class="sidebar-button" id="sidebar-btn">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512">
+        <path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path>
+      </svg>
+    </div>
     <a href="/"><span class="name">Rudy Thurston</span></a>
     <nav class="nav-links can-hide">
       <div class="nav-link">
         <a href="https://drive.google.com/file/d/1TWOcLudFKwSUO67sY-Y6ZO6WtoLcppvL/view?usp=sharing" target="_blank">Resume</a>
       </div>
       <div class="nav-link">
+        <a href="https://github.com/rlthurst/" target="_blank">Github</a>
+      </div>
+      <div class="nav-link">
         <div class="social-dropdown">
           <a class="dropdown-title">
-          <span>Social</span>
+          <span></span>
           </a>
           <ul class="nav-dropdown" style="display: none">
             <li class="drop"><a href="https://github.com/rlthurst" target="_blank">Github</a></li>
@@ -29,18 +48,17 @@
       </div>
     </nav>
   </header>
-  <div class="sidebar">
+  <div class="sidebar" id="sidebar">
     <div class="nav-links">
       <div class="nav-link">
         <a href="https://drive.google.com/file/d/1TWOcLudFKwSUO67sY-Y6ZO6WtoLcppvL/view?usp=sharing" target="_blank">Resume</a>
       </div>
       <div class="nav-link">
-        <span>Resume</span>`
-        <span class="arrow"></span>
+        <a href="https://github.com/rlthurst/" target="_blank">Github</a>
       </div>
     </div>
   </div>
-  <main>
+  <main id="main">
     <section class="rudy">
       <img src="https://avatars.githubusercontent.com/u/47407702?s=400&u=bcfd8185ffc6f0b9afafaf3148e2ff6d3d51cef0&v=4"
         alt="Rudy Thurston">
@@ -49,8 +67,11 @@
     </section>
     <section class="content">
       <h2>News</h2>
-      <p>🚀🌕</p>
+      <p>Open to offers!</p>
       <h2>Projects</h2>
+      <p><a href="https://github.com/rlthurst/gcs-signed-url-typescript" target="_blank">GCS Signed Url Typescript</a> | Manually sign urls for GCS & S3.</p>
+      <p><a href="https://rlthurst.github.io/task-manager/" target="_blank">Task Manager</a> | Simple crud app demo.</p>
+      <p><a href="https://github.com/TanveerMittal/Notez.ai" target="_blank">Notez.ai</a> | SDHacks 2021 Notable Hack Winner!</p>
       <p><a href="/" target="_blank">Portfolio Website</a> | Check it out!</p>
     </section>
   </main>
